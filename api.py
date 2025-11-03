@@ -186,7 +186,6 @@ def api_capture():
     now = datetime.now()
     filename = f"manual_capture_{now.strftime('%Y%m%d_%H%M%S')}.jpg"
     picam2.capture_file(filename)
-    
     return jsonify({"message": "Image captured", "file": filename})
 
 @app.route("/api/led", methods=["GET"])
